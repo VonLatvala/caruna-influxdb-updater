@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  mqtt-exporter:
+    image: vonlatvala/caruna-influxdb-updater
+    environment:
+      - INFLUX_HOST=
+      - INFLUX_USERNAME=
+      - INFLUX_PASSWORD=
+      - INFLUX_DATABASE=
+      - CARUNA_USERNAME=
+      - CARUNA_PASSWORD=
+    restart: unless-stopped
