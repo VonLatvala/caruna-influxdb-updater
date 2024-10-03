@@ -18,10 +18,9 @@ log "Activating virtual environment"
 set -eu
 
 log "Starting main loop"
-while [ true ]; do
+while true; do
     log "Running updater"
-    ./update_influxdb.sh
-    if [[ $? -ne 0 ]]; then
+    if ! ./update_influxdb.sh; then
         exit 1
     fi
     log "Done running updater. Sleeping for ${DELAY_SEC}s"
