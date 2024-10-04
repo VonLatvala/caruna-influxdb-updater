@@ -4,6 +4,7 @@ services:
   mqtt-exporter:
     image: vonlatvala/caruna-influxdb-updater
     environment:
+      - TZ=Europe/Helsinki
       - INFLUX_HOST=
       - INFLUX_USERNAME=
       - INFLUX_PASSWORD=
