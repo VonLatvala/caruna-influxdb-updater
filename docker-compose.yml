@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  mqtt-exporter:
+  caruna-influxdb-updater:
     image: vonlatvala/caruna-influxdb-updater
     environment:
       - TZ=Europe/Helsinki
